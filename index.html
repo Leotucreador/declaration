@@ -24,11 +24,9 @@
         }
         .buttons {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            position: relative;
+            justify-content: space-between;
             width: 100%;
+            padding: 0 20px;
             margin-top: 20px;
         }
         button {
@@ -54,6 +52,17 @@
             padding: 10px;
             border-radius: 10px;
         }
+        ul {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 10px;
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 20px;
+        }
+        li {
+            margin: 10px 0;
+        }
     </style>
 </head>
 <body>
@@ -63,6 +72,14 @@
         <button id="no" onmouseover="moverNo()" onclick="contarNo()">No</button>
     </div>
     <p id="mensaje"></p>
+
+    <ul>
+        <li>9000 copas en Clash Royale</li>
+        <li>Heroicos en Free Fire</li>
+        <li>Diamante en Call of Duty</li>
+        <li>Tengo Robux en Minecraft</li>
+        <li>Voy a la tienda sin papelito</li>
+    </ul>
 
     <script>
         let contadorNo = 0;
