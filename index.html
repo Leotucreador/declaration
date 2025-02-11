@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi novia?</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            background-image: url('https://www.hola.com/horizon/square/9a4b3064b603-plantar-tulipanes-t.jpg?im=Resize=(960),type=downsize');
+            background-size: cover;
+            background-position: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .buttons {
+            display: flex;
+            gap: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        #yes {
+            background-color: #4CAF50;
+            color: white;
+        }
+        #no {
+            background-color: #f44336;
+            color: white;
+            position: absolute;
+        }
+        #mensaje {
+            margin-top: 20px;
+            font-size: 18px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>¿Quieres ser mi novia?</h1>
+    <div class="buttons">
+        <button id="yes" onclick="aceptar()">Sí</button>
+        <button id="no" onmouseover="moverNo()">No</button>
+    </div>
+    <p id="mensaje"></p>
+
+    <script>
+        function aceptar() {
+            document.getElementById("mensaje").innerText = "Ya era hora de que me aceptaras, te diste cuenta que yo si valgo la pena";
+        }
+
+        function moverNo() {
+            let noButton = document.getElementById("no");
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
