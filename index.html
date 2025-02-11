@@ -24,7 +24,12 @@
         }
         .buttons {
             display: flex;
+            justify-content: center;
+            align-items: center;
             gap: 20px;
+            position: relative;
+            width: 100%;
+            margin-top: 20px;
         }
         button {
             padding: 10px 20px;
@@ -61,13 +66,15 @@
 
     <script>
         function aceptar() {
-            document.getElementById("mensaje").innerText = "Ya era hora de que me aceptaras, te diste cuenta que yo si valgo la pena";
+            document.getElementById("mensaje").innerText = "Ya era hora de que me aceptaras, te diste cuenta que yo sí valgo la pena";
         }
 
         function moverNo() {
             let noButton = document.getElementById("no");
-            let x = Math.random() * (window.innerWidth - 100);
-            let y = Math.random() * (window.innerHeight - 50);
+            let maxX = window.innerWidth - noButton.offsetWidth;
+            let maxY = window.innerHeight - noButton.offsetHeight;
+            let x = Math.random() * maxX;
+            let y = Math.random() * maxY;
             noButton.style.left = `${x}px`;
             noButton.style.top = `${y}px`;
         }
